@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "name": "Replace Tire",
+    "price": 2000,
+    "description": "This is about to how we reapir your car.",
+    "img": "https://i.ibb.co/p2rsztx/car2.png"
+  },
+  {
+    "id": 2,
+    "name": "Replace Engine",
+    "price": 5000,
+    "description": "This is about to how we reapir your car.",
+    "img": "https://i.ibb.co/qjqFrMz/car-cover.png"
+  },
+  {
+    "id": 3,
+    "name": "Replace Glass",
+    "price": 1000,
+    "description": "This is about to how we reapir your car.",
+    "img": "https://i.ibb.co/165ZmBY/Background-1.png"
+  },
+  {
+    "id": 4,
+    "name": "Replace Sit",
+    "price": 4000,
+    "description": "This is about to how we reapir your car.",
+    "img": "https://i.ibb.co/RTZf48F/engine.png"
+  },
+  {
+    "id": 5,
+    "name": "Replace Back",
+    "price": 6000,
+    "description": "This is about to how we reapir your car.",
+    "img": "https://i.ibb.co/GvxnHSq/mechanic2.png"
+  },
+  {
+    "id": 6,
+    "name": "Replace Staring",
+    "price": 7000,
+    "description": "This is about to how we reapir your car.",
+    "img": "https://i.ibb.co/Tqv19PR/mechanic1.png"
+  }
+]
