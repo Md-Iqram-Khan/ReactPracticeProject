@@ -11,11 +11,14 @@ const Services = () => {
       });
   }, []);
   return (
-    <div className="Service-area">
-      {data.map((item) => (
-        <Service key={item.id} service={item} />
-      ))}
-    </div>
+    <>
+      <h1 className="text-center text-uppercase my-3">Car Service</h1>
+      <div className="Service-area">
+        {data.map((item) => (
+          <Service key={item.id} service={item} />
+        ))}
+      </div>
+    </>
   );
 };
 
