@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Expert from "./Expert";
+import "./experts.css";
 
 const Experts = () => {
   const [experts, setExperts] = useState([]);
@@ -9,12 +10,17 @@ const Experts = () => {
       .then((data) => setExperts(data));
   }, []);
   return (
-    <div>
-      <h2 className="text-uppercase my-3">Our Experts</h2>
-      {experts.map((expert) => (
-        <Expert key={expert.id} expert={expert} />
-      ))}
-    </div>
+    <>
+      <hr className="my-5" />
+      <h2 className="text-uppercase mb-4 text-center">Our Experts</h2>
+      <div className="container">
+        <div className="expert-area ">
+          {experts.map((expert) => (
+            <Expert key={expert.id} expert={expert} />
+          ))}
+        </div>
+      </div>
+    </>
   );
 };
 

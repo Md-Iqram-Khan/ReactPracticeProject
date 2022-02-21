@@ -1,19 +1,18 @@
-.Service-area {
+.expert-area {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px 20px;
-  text-align: center;
-  /* align-items: center; */
+  color: black;
 }
 @media only screen and (max-width: 992px) {
-  .Service-area {
+  .expert-area {
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
   }
 }
 
 @media only screen and (max-width: 668px) {
-  .Service-area {
+  .expert-area {
     grid-template-columns: repeat(1, 1fr);
     gap: 20px;
   }
