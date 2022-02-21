@@ -1,26 +1,78 @@
 import React from "react";
-import { Container, Navbar } from "react-bootstrap";
+import { Button, Container, Nav, Navbar } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
+import useAuth from "../hooks/useAuth";
 
 const HomeBar = () => {
+  const { user, logOut } = useAuth();
+  console.log(user);
   return (
-    <Navbar className="bg-danger text-light mb-2">
-      <Container>
-        <Navbar.Brand href="#home">
-          <h4 className="text-uppercase text-light "> Car Solution</h4>
-        </Navbar.Brand>
-        <Navbar.Toggle />
-        <Navbar.Collapse className="justify-content-end">
-          <Navbar.Text>
-            <a className="text-decoration-none text-light mx-3" href="#login">
-              Login
-            </a>
-            <a className="text-decoration-none text-light" href="#login">
+    <div>
+      <Navbar
+        className="bg-danger text-light mb-2"
+        sticky="top"
+        collapseOnSelect
+        expand="md"
+      >
+        <Container>
+          <Navbar.Brand href="#home">
+            <Link
+              to="/"
+              className="text-uppercase fw-bold text-light text-decoration-none "
+            >
+              Car Solution
+            </Link>
+          </Navbar.Brand>
+          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+
+          <Navbar.Collapse className="justify-content-end">
+            <Nav.Link
+              as={HashLink}
+              className="text-decoration-none text-light mx-3"
+              to="/#experts"
+            >
+              Experts
+            </Nav.Link>
+
+            <Nav.Link
+              as={HashLink}
+              to="/#services"
+              className="text-decoration-none text-light mx-3"
+            >
+              Services
+            </Nav.Link>
+
+            {user?.email ? (
+              <div>
+                <Navbar.Text>
+                  <span className="text-light">Hello {user?.displayName}</span>
+                </Navbar.Text>
+                <Button onClick={logOut} className="btn-sm-info mx-3">
+                  LogOut
+                </Button>
+              </div>
+            ) : (
+              <Nav.Link
+                as={Link}
+                to="/login"
+                className="text-decoration-none text-light mx-3"
+              >
+                Login
+              </Nav.Link>
+            )}
+
+            <Nav.Link
+              as={Link}
+              to="/register"
+              className="text-decoration-none text-light mx-3"
+            >
               Register
-            </a>
-          </Navbar.Text>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+            </Nav.Link>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
+    </div>
   );
 };
 

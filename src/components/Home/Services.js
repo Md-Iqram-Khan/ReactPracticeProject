@@ -11,7 +11,7 @@ const Services = () => {
       });
   }, []);
   return (
-    <>
+    <div id="services">
       <h2 className="text-center text-uppercase my-3">Car Service</h2>
       <div className="container">
         <div className="Service-area ">
@@ -20,7 +20,7 @@ const Services = () => {
           ))}
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

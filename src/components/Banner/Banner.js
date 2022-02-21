@@ -5,7 +5,7 @@ import banner2 from "../../Utilitis/images/stock-vector-tire-car-advertisement-p
 import "./banner.css";
 const Banner = () => {
   return (
-    <Container>
+    <Container fluid>
       <Carousel>
         <Carousel.Item>
           <img className="d-block w-100" src={banner1} alt="First slide" />

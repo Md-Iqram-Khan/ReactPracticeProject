@@ -10,7 +10,7 @@ const Experts = () => {
       .then((data) => setExperts(data));
   }, []);
   return (
-    <>
+    <div id="experts">
       <hr className="my-5" />
       <h2 className="text-uppercase mb-4 text-center">Our Experts</h2>
       <div className="container">
@@ -20,7 +20,7 @@ const Experts = () => {
           ))}
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
